@@ -22,8 +22,14 @@ class FileReader extends Component
         return view('livewire.file-reader');
     }
 
+    protected array $rules = [
+        'path' => 'required'
+    ];
+
     public function getLines()
     {
+        $this->validate();
+
         try {
             $this->error = null;
             $fileParser = new FileParser($this->path);
