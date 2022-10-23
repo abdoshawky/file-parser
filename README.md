@@ -8,6 +8,7 @@ Please follow these steps to install the projects:
     - `cp .env.example .env` and update your database variables inside `.env` file.
     - `composer install`
     - `php artisan key:generate`.
+    - `npm install && npm run dev`.
     - `php artisan migrate --seed`.
 
 ## Demo
